@@ -306,6 +306,12 @@ section { position: relative; }
 
 section.block { padding: 80px 0; }
 section.block.alt { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+#pricing.block.alt { background: #ffffff; }
+#pricing .rate-card { background: var(--bg-soft); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) #pricing.block.alt { background: var(--bg-soft); }
+  :root:not([data-theme="light"]) #pricing .rate-card { background: var(--bg); }
+}
 
 /* Gallery -------------------------------------------------------- */
 .gallery-grid {
@@ -516,6 +522,18 @@ section.block:not(.alt) .aftercare-item { background: var(--bg); }
   max-width: 36rem;
   font-size: 0.95rem;
 }
+
+/* Blog article ---------------------------------------------------- */
+.article { max-width: 720px; padding-top: 64px; padding-bottom: 64px; }
+.article h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(34px, 5vw, 54px); line-height: 1.08; margin: 0 0 12px; }
+.article .meta { font-family: var(--font-mono); font-size: 13px; color: var(--ink-soft); margin: 0 0 36px; }
+.article .body h2 { font-family: var(--font-display); font-weight: 400; font-size: 26px; margin: 36px 0 10px; }
+.article .body p, .article .body li { color: var(--ink-soft); font-size: 17px; }
+.article .body blockquote { border-left: 2px solid var(--accent); margin: 28px 0; padding: 4px 0 4px 20px; font-family: var(--font-display); font-size: 22px; color: var(--ink); }
+.article .back { display: inline-block; margin-top: 40px; font-family: var(--font-mono); font-size: 13px; color: var(--accent); }
+.wallpaper-preview { max-width: 320px; width: 100%; margin: 24px 0; border: 1px solid var(--line-strong); border-radius: var(--radius); }
+.page-intro { padding-top: 64px; }
+.page-intro h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(34px, 5vw, 54px); margin: 0 0 12px; }
 
 /* Contact / Footer ------------------------------------------------ */
 .contact {
